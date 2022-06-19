@@ -2,7 +2,6 @@ package com.majiang.community.controller;
 
 import com.majiang.community.dto.AccessTokenDTO;
 import com.majiang.community.dto.GithubUser;
-import com.majiang.community.mapper.UserMapper;
 import com.majiang.community.model.User;
 import com.majiang.community.provider.GithubProvider;
 import com.majiang.community.service.UserService;
@@ -34,8 +33,6 @@ public class AuthorizeController {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    User user;
 
     @GetMapping("/callback")
     public String callBack(@RequestParam(value = "code") String code,
@@ -51,6 +48,7 @@ public class AuthorizeController {
         GithubUser githubUser = githubProvider.getUser(accessToken);
         if (githubUser != null){
             String token = UUID.randomUUID().toString();
+            User user = new User();
             user.setToken(token);
             user.setName(githubUser.getName());
             user.setAccountId(String.valueOf(githubUser.getId()));

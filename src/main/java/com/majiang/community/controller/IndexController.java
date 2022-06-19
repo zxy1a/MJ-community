@@ -1,7 +1,8 @@
 package com.majiang.community.controller;
 
 import com.majiang.community.dto.PaginationDTO;
-import com.majiang.community.mapper.UserMapper;;
+;
+import com.majiang.community.mapper.UserMapper;
 import com.majiang.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

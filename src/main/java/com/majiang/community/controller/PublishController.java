@@ -21,8 +21,6 @@ public class PublishController {
     @Autowired
     QuestionMapper questionMapper;
 
-    @Autowired
-    Question question;
 
     @Autowired
     UserMapper userMapper;
@@ -33,7 +31,7 @@ public class PublishController {
     @GetMapping("/publish/{id}")
     public String edit(@PathVariable("id") Integer id,
                        Model model) {
-        Question question = questionMapper.getById(id);
+        Question question = questionMapper.selectByPrimaryKey(id);
         model.addAttribute("title",question.getTitle());
         model.addAttribute("description",question.getDescription());
         model.addAttribute("tag",question.getTag());
@@ -79,6 +77,7 @@ public class PublishController {
             return "publish";
         }
 
+        Question question = new Question();
         question.setTitle(title);
         question.setDescription(description);
         question.setTag(tag);

@@ -22,8 +22,6 @@ public class ProfileController {
     @Autowired
     QuestionService questionService;
 
-    @Autowired
-    User user;
 
     @GetMapping("/profile/{action}")
     public String profile(@PathVariable("action") String action,
