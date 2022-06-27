@@ -1,17 +1,24 @@
 body {
     background-color: #efefef;
 }
+
 .main {
     background-color: white;
     margin: 30px;
 }
+
 .btn-publish {
     float: right;
     margin-bottom: 15px;
 }
+
 .media-object {
     height: 38px;
     width: 38px;
+}
+
+.media-body {
+    padding-top: 10px;
 }
 
 .text-desc {
@@ -23,6 +30,7 @@ body {
 .profile .section {
     margin-top: 15px;
 }
+
 .community-menu {
     color: #999999;
     font-size: 12px;
@@ -30,4 +38,13 @@ body {
 
 .jumbotron {
     margin: 50px;
+}
+
+.comment {
+    margin: 10px 0;
+}
+
+.btn-comment {
+    float: right;
+    margin: 10px;
 }

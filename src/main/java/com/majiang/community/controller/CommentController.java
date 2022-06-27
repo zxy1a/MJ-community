@@ -3,7 +3,6 @@ package com.majiang.community.controller;
 import com.majiang.community.dto.CommentDTO;
 import com.majiang.community.dto.ResultDTO;
 import com.majiang.community.exception.CustomizeErrorCode;
-import com.majiang.community.mapper.CommentMapper;
 import com.majiang.community.model.Comment;
 import com.majiang.community.model.User;
 import com.majiang.community.service.CommentService;
@@ -12,8 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
-import java.util.Map;
 
 
 @Controller
