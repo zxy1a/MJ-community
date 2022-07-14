@@ -1,0 +1,2 @@
+# MJ-community
+Majiang community
